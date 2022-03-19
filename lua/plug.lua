@@ -35,4 +35,6 @@ return require('packer').startup(function(use)
         run = ':TSUpdate'
     }
     use { 'glepnir/lspsaga.nvim' }
+    use { 'voldikss/vim-floaterm'}
  end)
+
