@@ -13,6 +13,10 @@ return require('packer').startup(function(use)
         requires = {'kyazdani42/nvim-web-devicons',
                     opt = true}
     }
+    use { 'yamatsum/nvim-cursorline' }
+    use { 'sangdol/mintabline.vim' }
+    use { 'danilamihailov/beacon.nvim' }
+    use { 'vijaymarupudi/nvim-fzf' }
 
     -- [[ Dev ]]
     use {
@@ -36,5 +40,6 @@ return require('packer').startup(function(use)
     }
     use { 'glepnir/lspsaga.nvim' }
     use { 'voldikss/vim-floaterm'}
+    use { 'williamboman/nvim-lsp-installer' }
  end)
 
