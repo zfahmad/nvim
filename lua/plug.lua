@@ -42,5 +42,6 @@ return require('packer').startup(function(use)
     use { 'glepnir/lspsaga.nvim' }
     use { 'voldikss/vim-floaterm'}
     use { 'williamboman/nvim-lsp-installer' }
+    use { 'lervag/vimtex' }
  end)
 
