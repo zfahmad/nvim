@@ -8,6 +8,7 @@ return require('packer').startup(function(use)
         requires = 'kyazdani42/nvim-web-devicons'
     }
     use { 'EdenEast/nightfox.nvim' }
+    use { 'dracula/vim' }
     use {
         'nvim-lualine/lualine.nvim',
         requires = {'kyazdani42/nvim-web-devicons',
