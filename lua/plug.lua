@@ -3,10 +3,6 @@
 return require('packer').startup(function(use)
 -- Plugins go here
     use { 'wbthomason/packer.nvim' }
-    use {
-        'kyazdani42/nvim-tree.lua',
-        requires = 'kyazdani42/nvim-web-devicons'
-    }
     use { 'EdenEast/nightfox.nvim' }
     use { 'dracula/vim' }
     use {
@@ -42,6 +38,6 @@ return require('packer').startup(function(use)
     use { 'glepnir/lspsaga.nvim' }
     use { 'voldikss/vim-floaterm'}
     use { 'williamboman/nvim-lsp-installer' }
-    use { 'lervag/vimtex' }
+    use { 'luukvbaal/nnn.nvim' }
  end)
 

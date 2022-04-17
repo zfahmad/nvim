@@ -10,7 +10,7 @@ require('lsp_config')
 require('lua_lsp_config')
 
 -- PLUGINS
-require('nvim-tree').setup {}
+require('nnn').setup {}
 require('lualine').setup {
     options = {
         theme = 'nightfox'
