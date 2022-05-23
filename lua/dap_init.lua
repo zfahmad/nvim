@@ -1,11 +1,4 @@
-local M = {}
-
 local function configure()
-  local dap_install = require "dap-install"
-  dap_install.setup {
-    installation_path = vim.fn.stdpath "data" .. "/dapinstall/",
-  }
-
   local dap_breakpoint = {
     error = {
       text = "🟥",
@@ -37,7 +30,7 @@ local function configure_exts()
     commented = true,
   }
 
-  local dap, dapui = require "dap", require "dapui"
+  local dap, dapui = require("dap"), require("dapui")
   dapui.setup {} -- use default
   dap.listeners.after.event_initialized["dapui_config"] = function()
     dapui.open()
@@ -50,20 +43,7 @@ local function configure_exts()
   end
 end
 
-local function configure_debuggers()
-  require("config.dap.lua").setup()
-  require("config.dap.python").setup()
-  require("config.dap.rust").setup()
-  require("config.dap.go").setup()
-end
+configure() -- Configuration
+configure_exts() -- Extensions
+require('dap-python').setup('~/anaconda3/bin/python', {})
 
-function M.setup()
-  configure() -- Configuration
-  configure_exts() -- Extensions
-  configure_debuggers() -- Debugger
-  require("config.dap.keymaps").setup() -- Keymaps
-end
-
-configure_debuggers()
-
-return M
