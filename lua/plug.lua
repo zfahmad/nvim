@@ -4,6 +4,7 @@ return require('packer').startup(function(use)
 -- Plugins go here
     use { 'wbthomason/packer.nvim' }
     use { 'EdenEast/nightfox.nvim' }
+    use { 'arcticicestudio/nord-vim' }
     use { 'dracula/vim' }
     use {
         'nvim-lualine/lualine.nvim',
@@ -39,5 +40,28 @@ return require('packer').startup(function(use)
     use { 'voldikss/vim-floaterm'}
     use { 'williamboman/nvim-lsp-installer' }
     use { 'luukvbaal/nnn.nvim' }
+
+    -- DAP Plugins
+    use { "folke/which-key.nvim" }
+    use {
+        "mfussenegger/nvim-dap",
+        opt = true,
+        event = "BufReadPre",
+        module = { "dap" },
+        wants = { "nvim-dap-virtual-text",
+                  "DAPInstall.nvim",
+                  "nvim-dap-ui",
+                  "nvim-dap-python",
+                  "which-key.nvim" },
+        requires = {
+                  "Pocco81/DAPInstall.nvim",
+                  "theHamsta/nvim-dap-virtual-text",
+                  "rcarriga/nvim-dap-ui",
+                  "mfussenegger/nvim-dap-python",
+                  "nvim-telescope/telescope-dap.nvim",
+                  { "leoluz/nvim-dap-go", module = "dap-go" },
+                  { "jbyuki/one-small-step-for-vimkind", module = "osv" },
+        },
+      config = function() require("config.dap").setup() end, }
  end)
 
