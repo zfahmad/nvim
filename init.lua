@@ -13,7 +13,7 @@ require('lua_lsp_config')
 require('nnn').setup {}
 require('lualine').setup {
     options = {
-        theme = 'nightfox'
+        theme = 'nord'
     }
 }
 require('nvim-autopairs').setup {}
