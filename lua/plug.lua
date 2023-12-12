@@ -34,19 +34,22 @@ return require('packer').startup(function(use)
     use { 'L3MON4D3/LuaSnip' }
     use {
         'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
+        run = function()
+            local ts_update = require('nvim-treesitter.install').update({with_sync = true})
+            ts_update()
+        end,
     }
     use { 'glepnir/lspsaga.nvim' }
     use { 'voldikss/vim-floaterm'}
     use { 'williamboman/nvim-lsp-installer' }
     use { 'luukvbaal/nnn.nvim' }
 
-    -- DAP Plugins
-    use { "folke/which-key.nvim" }
-    use { "mfussenegger/nvim-dap" }
-    use { "mfussenegger/nvim-dap-python" }
-    use { "rcarriga/nvim-dap-ui" }
-    use { "theHamsta/nvim-dap-virtual-text" }
-    use { "nvim-telescope/telescope-dap.nvim" }
+    -- -- DAP Plugins
+    -- use { "folke/which-key.nvim" }
+    -- use { "mfussenegger/nvim-dap" }
+    -- use { "mfussenegger/nvim-dap-python" }
+    -- use { "rcarriga/nvim-dap-ui" }
+    -- use { "theHamsta/nvim-dap-virtual-text" }
+    -- use { "nvim-telescope/telescope-dap.nvim" }
  end)
 

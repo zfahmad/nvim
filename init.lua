@@ -6,16 +6,17 @@ require('vars')
 require('opts')
 require('keys')
 require('plug')
+require("nvim-lsp-installer").setup {}
 require('lsp_config')
-require('lua_lsp_config')
-require('dap_init')
-require('dap_keymaps')
+-- require('lua_lsp_config')
+-- require('dap_init')
+-- require('dap_keymaps')
 
 -- PLUGINS
 require('nnn').setup {}
 require('lualine').setup {
     options = {
-        theme = 'nord'
+        theme = 'nightfox'
     }
 }
 require('nvim-autopairs').setup {}
@@ -31,10 +32,9 @@ require('nvim-treesitter.configs').setup {
   ensure_installed = {
     "python",
     "c",
-    "cpp",
-    "lua"
+    "cpp"
   },
 }
-
+-- 
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
