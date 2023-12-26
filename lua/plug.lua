@@ -39,10 +39,22 @@ return require('packer').startup(function(use)
             ts_update()
         end,
     }
+    use { 'lukas-reineke/indent-blankline.nvim' }
+    use {
+        'numToStr/Comment.nvim',
+        config = function ()
+            require ('Comment').setup()
+	end
+    }
     use { 'glepnir/lspsaga.nvim' }
     use { 'voldikss/vim-floaterm'}
     use { 'williamboman/nvim-lsp-installer' }
     use { 'luukvbaal/nnn.nvim' }
+
+    -- [[ Conjure for REPL ]]
+    use { 'Olical/conjure' }
+    use { 'guns/vim-sexp' }
+
 
     -- -- DAP Plugins
     -- use { "folke/which-key.nvim" }

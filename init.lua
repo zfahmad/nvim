@@ -1,11 +1,11 @@
+vim.g.maplocalleader = ","
 vim.g.mapleader = ","
-vim.g.localleader = "\\"
 
 -- IMPORTS
+require('plug')
 require('vars')
 require('opts')
 require('keys')
-require('plug')
 require("nvim-lsp-installer").setup {}
 require('lsp_config')
 -- require('lua_lsp_config')
@@ -13,12 +13,15 @@ require('lsp_config')
 -- require('dap_keymaps')
 
 -- PLUGINS
+require('nvim-cmp')
 require('nnn').setup {}
 require('lualine').setup {
     options = {
         theme = 'nightfox'
     }
 }
+require('Comment').setup {}
+require("ibl").setup {}
 require('nvim-autopairs').setup {}
 require('nvim-treesitter.configs').setup {
     highlight = {
@@ -32,7 +35,12 @@ require('nvim-treesitter.configs').setup {
   ensure_installed = {
     "python",
     "c",
-    "cpp"
+    "cpp",
+    "clojure",
+    "lua",
+    "markdown",
+    "vim",
+    "bash",
   },
 }
 -- 
