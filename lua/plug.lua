@@ -57,11 +57,11 @@ return require('packer').startup(function(use)
 
 
     -- -- DAP Plugins
-    -- use { "folke/which-key.nvim" }
-    -- use { "mfussenegger/nvim-dap" }
-    -- use { "mfussenegger/nvim-dap-python" }
-    -- use { "rcarriga/nvim-dap-ui" }
-    -- use { "theHamsta/nvim-dap-virtual-text" }
+    use { "folke/which-key.nvim" }
+    use { "mfussenegger/nvim-dap" }
+    use { "mfussenegger/nvim-dap-python" }
+    use { "rcarriga/nvim-dap-ui" }
+    use { "theHamsta/nvim-dap-virtual-text" }
     -- use { "nvim-telescope/telescope-dap.nvim" }
  end)
 
