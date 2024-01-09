@@ -19,3 +19,8 @@ map('n', '<M-k>', '<C-w>k', opts)
 map('n', '<M-h>', '<C-w>h', opts)
 map('n', '<M-l>', '<C-w>l', opts)
 
+map('n', '<C-u>', '<C-u>zz', {})
+map('n', '<C-d>', '<C-d>zz', {})
+map('n', 'n', 'nzz', {})
+
+
