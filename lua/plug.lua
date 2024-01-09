@@ -3,6 +3,7 @@
 return require('packer').startup(function(use)
 -- Plugins go here
     use { 'wbthomason/packer.nvim' }
+    use { 'catppuccin/nvim', as = 'catppuccin'}
     use { 'EdenEast/nightfox.nvim' }
     use { 'arcticicestudio/nord-vim' }
     use { 'dracula/vim' }
@@ -50,6 +51,9 @@ return require('packer').startup(function(use)
     use { 'voldikss/vim-floaterm'}
     use { 'williamboman/nvim-lsp-installer' }
     use { 'luukvbaal/nnn.nvim' }
+    use { 'mbbill/undotree' }
+    use { 'folke/zen-mode.nvim' }
+    use { 'folke/trouble.nvim' }
 
     -- [[ Conjure for REPL ]]
     use { 'Olical/conjure' }

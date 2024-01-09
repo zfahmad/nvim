@@ -16,7 +16,7 @@ opt.fileencoding = 'utf8'        -- str:  File encoding to use
 -- [[ Theme ]]
 opt.syntax = "ON"                -- str:  Allow syntax highlighting
 opt.termguicolors = true         -- bool: If term supports ui color then enable
-vim.cmd('colorscheme nightfox')
+vim.cmd('colorscheme catppuccin-macchiato')
 opt.cursorline =  true
 vim.g.cursorline_timeout = '0'
 

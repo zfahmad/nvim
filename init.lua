@@ -8,7 +8,7 @@ require('opts')
 require('keys')
 require("nvim-lsp-installer").setup {}
 require('lsp_config')
--- require('lua_lsp_config')
+require('lua_lsp_config')
 require('dap_init')
 require('dap_keymaps')
 
@@ -19,11 +19,11 @@ require('nnn').setup ({
         width = 30
     }
 })
-require('lualine').setup {
+require('lualine').setup ({
     options = {
-        theme = 'nightfox'
+        theme = 'catppuccin'
     }
-}
+})
 require('Comment').setup {}
 require("ibl").setup {}
 require('nvim-autopairs').setup {}
