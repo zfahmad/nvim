@@ -54,6 +54,7 @@ return require('packer').startup(function(use)
     use { 'mbbill/undotree' }
     use { 'folke/zen-mode.nvim' }
     use { 'folke/trouble.nvim' }
+    use { 'lewis6991/gitsigns.nvim' }
 
     -- [[ Conjure for REPL ]]
     use { 'Olical/conjure' }

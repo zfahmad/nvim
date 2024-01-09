@@ -3,16 +3,18 @@
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent =true }
 
-map('n', '<Leader>n', [[:NnnExplorer]], {})
-map('n', '<Leader>np', [[:NnnPicker]], {})
-map('n', '<Leader>l', [[:IndentLinesToggle]], {})
-map('n', '<Leader>t', [[:TagbarToggle]], {})
-map('n', '<Leader>ff', [[:Telescope find_files]], {})
-map('n', '<Leader>g', [[:Telescope live_grep]], {})
-map('n', '<Leader>sb', [[:Telescope buffers]], {})
+map('n', '<Leader>nn', [[:NnnExplorer<CR>]], {})
+map('n', '<Leader>np', [[:NnnPicker<CR>]], {})
+map('n', '<Leader>l', [[:IndentLinesToggle<CR>]], {})
+map('n', '<Leader>t', [[:TagbarToggle<CR>]], {})
+map('n', '<Leader>ff', [[:Telescope find_files<CR>]], {})
+map('n', '<Leader>fg', [[:Telescope live_grep<CR>]], {})
+map('n', '<Leader>sb', [[:Telescope buffers<CR>]], {})
 map('n', '<C-t>', [[:FloatermNew --position=bottomleft --height=0.4 --width=0.5]], {})
 map('n', '<Leader>m', [[:make]], {})
 map('n', '<Leader>cl', [[:set conceallevel=0]], {})
+map('n', '<Leader>ut', [[:UndotreeToggle<CR>]], {})
+map('n', '<Leader>uf', [[:UndotreeFocus<CR>]], {})
 
 map('n', '<M-j>', '<C-w>j', opts)
 map('n', '<M-k>', '<C-w>k', opts)
