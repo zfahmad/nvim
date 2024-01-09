@@ -21,7 +21,9 @@ require('nnn').setup ({
 })
 require('lualine').setup ({
     options = {
-        theme = 'catppuccin'
+        theme = 'catppuccin',
+        component_separators = { left = '|', right = '|'},
+        section_separators = { left = '█', right = '█'},
     }
 })
 require('Comment').setup {}
