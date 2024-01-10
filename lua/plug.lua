@@ -16,6 +16,13 @@ return require('packer').startup(function(use)
     use { 'sangdol/mintabline.vim' }
     use { 'danilamihailov/beacon.nvim' }
     use { 'vijaymarupudi/nvim-fzf' }
+    use {
+        "kylechui/nvim-surround",
+        tag = "*",
+        config = function()
+            require("nvim-surround")
+        end,
+    }
 
     -- [[ Dev ]]
     use {
@@ -26,7 +33,7 @@ return require('packer').startup(function(use)
     use { 'Yggdroot/indentLine' }
     use { 'tpope/vim-fugitive' }
     use { 'junegunn/gv.vim' }
-    use { 'windwp/nvim-autopairs' }
+    -- use { 'windwp/nvim-autopairs' }
     use { 'junegunn/fzf' }
     use { 'neovim/nvim-lspconfig' }
     use { 'hrsh7th/nvim-cmp' }
@@ -40,6 +47,13 @@ return require('packer').startup(function(use)
             ts_update()
         end,
     }
+    use {
+        "Wansmer/treesj",
+        requires = { "nvim-treesitter/nvim-treesitter" },
+        config = function()
+            require("treesj").setup {}
+        end,
+    }
     use { 'lukas-reineke/indent-blankline.nvim' }
     use {
         'numToStr/Comment.nvim',
@@ -47,14 +61,22 @@ return require('packer').startup(function(use)
             require ('Comment').setup()
 	end
     }
-    use { 'glepnir/lspsaga.nvim' }
+    use {
+        'nvimdev/lspsaga.nvim',
+        after = "nvim-lspconfig",
+        config = function()
+            require("lspsaga")
+        end,
+    }
     use { 'voldikss/vim-floaterm'}
-    use { 'williamboman/nvim-lsp-installer' }
+    use { 'williamboman/mason.nvim' }
+    use { 'williamboman/mason-lspconfig.nvim' }
     use { 'luukvbaal/nnn.nvim' }
     use { 'mbbill/undotree' }
     use { 'folke/zen-mode.nvim' }
     use { 'folke/trouble.nvim' }
     use { 'lewis6991/gitsigns.nvim' }
+    use { 'nvim-tree/nvim-web-devicons'}
 
     -- [[ Conjure for REPL ]]
     use { 'Olical/conjure' }

@@ -54,7 +54,13 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'pyright', 'clangd', 'jsonls' }
+local servers = {
+    'pyright',
+    'clangd',
+    'jsonls',
+    'lua_ls',
+    'clojure_lsp',
+}
 for _, lsp in pairs(servers) do
   require('lspconfig')[lsp].setup {
     capabilities = capabilities,
