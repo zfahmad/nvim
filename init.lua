@@ -14,6 +14,7 @@ require('dap_init')
 require('dap_keymaps')
 
 -- PLUGINS
+require('dressing').setup()
 require('nvim-web-devicons').setup()
 require('gitsigns').setup()
 require('nvim-cmp')
@@ -34,6 +35,7 @@ require('lualine').setup ({
 require('Comment').setup {}
 require("ibl").setup {}
 -- require('nvim-autopairs').setup {}
+-- require('lspsaga').setup {}
 require('nvim-treesitter.configs').setup {
     highlight = {
         enable = true,

@@ -5,7 +5,7 @@ return require('packer').startup(function(use)
     use { 'wbthomason/packer.nvim' }
     use { 'catppuccin/nvim', as = 'catppuccin'}
     use { 'EdenEast/nightfox.nvim' }
-    use { 'arcticicestudio/nord-vim' }
+    use { 'shaunsingh/nord.nvim' }
     use { 'dracula/vim' }
     use {
         'nvim-lualine/lualine.nvim',
@@ -15,7 +15,7 @@ return require('packer').startup(function(use)
     use { 'yamatsum/nvim-cursorline' }
     use { 'sangdol/mintabline.vim' }
     use { 'danilamihailov/beacon.nvim' }
-    use { 'vijaymarupudi/nvim-fzf' }
+    -- use { 'vijaymarupudi/nvim-fzf' }
     use {
         "kylechui/nvim-surround",
         tag = "*",
@@ -23,14 +23,16 @@ return require('packer').startup(function(use)
             require("nvim-surround")
         end,
     }
+    use { 'stevearc/dressing.nvim' }
 
     -- [[ Dev ]]
     use {
         'nvim-telescope/telescope.nvim',
         requires = { 'nvim-lua/plenary.nvim' }
     }
+    -- use { 'mfussenegger/nvim-lint' }
     use { 'majutsushi/tagbar' }
-    use { 'Yggdroot/indentLine' }
+    -- use { 'Yggdroot/indentLine' }
     use { 'tpope/vim-fugitive' }
     use { 'junegunn/gv.vim' }
     -- use { 'windwp/nvim-autopairs' }
@@ -71,9 +73,11 @@ return require('packer').startup(function(use)
     use { 'voldikss/vim-floaterm'}
     use { 'williamboman/mason.nvim' }
     use { 'williamboman/mason-lspconfig.nvim' }
+    use { 'jose-elias-alvarez/null-ls.nvim' }
+    use { 'jay-babu/mason-null-ls.nvim' }
     use { 'luukvbaal/nnn.nvim' }
     use { 'mbbill/undotree' }
-    use { 'folke/zen-mode.nvim' }
+    -- use { 'folke/zen-mode.nvim' }
     use { 'folke/trouble.nvim' }
     use { 'lewis6991/gitsigns.nvim' }
     use { 'nvim-tree/nvim-web-devicons'}
