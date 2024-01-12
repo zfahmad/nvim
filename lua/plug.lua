@@ -24,6 +24,11 @@ return require('packer').startup(function(use)
         end,
     }
     use { 'stevearc/dressing.nvim' }
+    use { 'rcarriga/nvim-notify' }
+    use {
+        'folke/noice.nvim',
+        requires = { "MunifTanjim/nui.nvim" }
+    }
 
     -- [[ Dev ]]
     use {
