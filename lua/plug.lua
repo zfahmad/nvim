@@ -23,6 +23,12 @@ return require('packer').startup(function(use)
             require("nvim-surround")
         end,
     }
+    use {
+        'rmagatti/goto-preview',
+        config = function()
+            require('goto-preview').setup {}
+        end
+    }
     use { 'stevearc/dressing.nvim' }
     use { 'rcarriga/nvim-notify' }
     use {

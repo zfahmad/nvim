@@ -15,6 +15,9 @@ require('dap_keymaps')
 
 -- PLUGINS
 require('dressing').setup()
+require('goto-preview').setup({
+    default_mappings = true
+})
 require("noice").setup({
   lsp = {
     -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
