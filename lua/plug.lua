@@ -35,6 +35,7 @@ return require('packer').startup(function(use)
         'folke/noice.nvim',
         requires = { "MunifTanjim/nui.nvim" }
     }
+    use {'christoomey/vim-tmux-navigator'}
 
     -- [[ Dev ]]
     use {
