@@ -85,11 +85,11 @@ return require('packer').startup(function(use)
     use { 'voldikss/vim-floaterm'}
     use { 'williamboman/mason.nvim' }
     use { 'williamboman/mason-lspconfig.nvim' }
-    use { 'jose-elias-alvarez/null-ls.nvim' }
+    use { 'nvimtools/none-ls.nvim' }
     use { 'jay-babu/mason-null-ls.nvim' }
     use { 'luukvbaal/nnn.nvim' }
     use { 'mbbill/undotree' }
-    -- use { 'folke/zen-mode.nvim' }
+    use { 'folke/zen-mode.nvim' }
     use { 'folke/trouble.nvim' }
     use { 'lewis6991/gitsigns.nvim' }
     use { 'nvim-tree/nvim-web-devicons'}

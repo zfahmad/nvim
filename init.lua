@@ -22,7 +22,7 @@ require("noice").setup({
   lsp = {
     -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
         progress = {
-            enabled = false
+            enabled = true
         },
     override = {
       ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
@@ -39,6 +39,7 @@ require("noice").setup({
     lsp_doc_border = false, -- add a border to hover docs and signature help
   },
 })
+require('zen-mode').setup()
 require('nvim-web-devicons').setup()
 require('gitsigns').setup()
 require('nvim-cmp')
@@ -65,7 +66,6 @@ require('lualine').setup ({
 require('Comment').setup {}
 require("ibl").setup {}
 -- require('nvim-autopairs').setup {}
--- require('lspsaga').setup {}
 require('nvim-treesitter.configs').setup {
     highlight = {
         enable = true,
