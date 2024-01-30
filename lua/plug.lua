@@ -1,7 +1,7 @@
 -- [[ plug.lua ]]
 
 return require('packer').startup(function(use)
--- Plugins go here
+    -- Plugins go here
     use { 'wbthomason/packer.nvim' }
     use { 'catppuccin/nvim', as = 'catppuccin'}
     use { 'EdenEast/nightfox.nvim' }
@@ -10,7 +10,7 @@ return require('packer').startup(function(use)
     use {
         'nvim-lualine/lualine.nvim',
         requires = {'kyazdani42/nvim-web-devicons',
-                    opt = true}
+            opt = true}
     }
     use { 'yamatsum/nvim-cursorline' }
     use { 'sangdol/mintabline.vim' }
@@ -106,5 +106,26 @@ return require('packer').startup(function(use)
     use { "rcarriga/nvim-dap-ui" }
     use { "theHamsta/nvim-dap-virtual-text" }
     -- use { "nvim-telescope/telescope-dap.nvim" }
+    --
+    use {
+    "nvim-neorg/neorg",
+    config = function()
+        require('neorg').setup {
+            load = {
+                ["core.defaults"] = {}, -- Loads default behaviour
+                ["core.concealer"] = {}, -- Adds pretty icons to your documents
+                ["core.dirman"] = { -- Manages Neorg workspaces
+                    config = {
+                        workspaces = {
+                            notes = "~/notes",
+                        },
+                    },
+                },
+            },
+        }
+    end,
+    run = ":Neorg sync-parsers",
+    requires = "nvim-lua/plenary.nvim",
+}
  end)
 

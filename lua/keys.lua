@@ -28,4 +28,6 @@ map('n', '<C-d>', '<C-d>zz', {})
 map('n', 'n', 'nzz', {})
 map('n', 'N', 'Nzz', {})
 
+map('v', 'J', 'xp`[V`]', {})
+map('v', 'K', 'xkP`[V`]', {})
 
