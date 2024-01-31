@@ -5,6 +5,7 @@ local opts = { noremap = true, silent =true }
 
 map('n', '<Leader>nn', [[:NnnExplorer<CR>]], {})
 map('n', '<Leader>np', [[:NnnPicker<CR>]], {})
+map('n', '<Leader>ne', [[:Neotree toggle<CR>]], {})
 map('n', '<Leader>l', [[:IndentLinesToggle<CR>]], {})
 map('n', '<Leader>tt', [[:TagbarToggle<CR>]], {})
 map('n', '<Leader>ff', [[:Telescope find_files<CR>]], {})

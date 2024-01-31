@@ -36,6 +36,15 @@ return require('packer').startup(function(use)
         requires = { "MunifTanjim/nui.nvim" }
     }
     use {'christoomey/vim-tmux-navigator'}
+    use {
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v3.x",
+        requires = {
+            "nvim-lua/plenary.nvim",
+            "nvim-tree/nvim-web-devicons",
+            "MunifTanjim/nui.nvim",
+        }
+    }
 
     -- [[ Dev ]]
     use {
