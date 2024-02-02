@@ -2,7 +2,6 @@
 -- return require('packer').startup(function(use)
 --     -- Plugins go here
 --     -- [[ Dev ]]
---     use { 'neovim/nvim-lspconfig' }
 --     use { 'hrsh7th/nvim-cmp' }
 --     use { 'hrsh7th/cmp-nvim-lsp' }
 --     use { 'saadparwaiz1/cmp_luasnip' }
@@ -19,8 +18,6 @@
 --             require("lspsaga")
 --         end,
 --     }
---     use { 'williamboman/mason.nvim' }
---     use { 'williamboman/mason-lspconfig.nvim' }
 --     use { 'nvimtools/none-ls.nvim' }
 --     use { 'jay-babu/mason-null-ls.nvim' }
 --     use { 'luukvbaal/nnn.nvim' }
