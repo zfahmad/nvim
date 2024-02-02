@@ -1,5 +1,4 @@
-
--- -- IMPORTS
+-- IMPORTS
 -- require('plug')
 -- require('vars')
 -- require('opts')
@@ -40,7 +39,7 @@
 -- require('zen-mode').setup()
 -- require('nvim-web-devicons').setup()
 -- require('gitsigns').setup()
--- require('nvim-cmp')
+-- r- require('nvim-cmp')
 -- require('nvim-surround').setup()
 -- require('treesj').setup()
 -- require('nnn').setup ({
@@ -54,35 +53,24 @@
 --         }
 --     }
 -- })
--- require('lualine').setup ({
---     options = {
---         theme = 'catppuccin',
---         component_separators = { left = '', right = '' },
---         section_separators = { left = '', right = '' },
---     }
--- })
 -- require('Comment').setup {}
 -- require("ibl").setup {}
 -- -- require('nvim-autopairs').setup {}
--- require('nvim-treesitter.configs').setup {
---     },
--- }
 --
--- vim.opt.foldmethod = "expr"
--- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath,
+    })
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("opts")
+require("config.options")
+require("config.keymaps")
 require("lazy").setup("plugins")
