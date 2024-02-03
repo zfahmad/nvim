@@ -16,6 +16,7 @@ return {
                     "jsonls",
                     "bashls",
                     "vimls",
+                    "vimtex",
                 },
             })
         end,
@@ -106,6 +107,7 @@ return {
                 "jsonls",
                 "bashls",
                 "vimls",
+                "vimtex",
             }
 
             for _, lsp in pairs(servers) do
