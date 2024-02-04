@@ -4,7 +4,10 @@ return {
     config = function()
         local config = require("nvim-treesitter.configs")
         config.setup({
-            highlight = { enable = true },
+            highlight = {
+                enable = true,
+                disable = { "latex", "bib" },
+            },
             indent = { enable = true },
             --     ensure_installed = {
             --         "python",
