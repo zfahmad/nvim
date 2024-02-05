@@ -4,7 +4,11 @@ return {
         name = "catppuccin",
         priority = 1000,
         config = function()
-            vim.cmd.colorscheme("catppuccin-macchiato")
-        end,
+            require("catppuccin").setup({
+                flavour = "macchiato"
+            })
+            vim.cmd.colorscheme "catppuccin"
+            vim.opt.colorcolumn="80"
+        end
     },
 }

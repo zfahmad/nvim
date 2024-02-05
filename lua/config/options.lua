@@ -11,6 +11,9 @@ opt.relativenumber = true        -- bool: Show relative line numbers
 opt.scrolloff = 12               -- int:  Min num lines of context
 opt.signcolumn = "yes"           -- str:  Show the sign column
 vim.bo.filetype = "ON"
+opt.wrap = false
+opt.breakindent = true
+opt.foldlevel = 999
 
 -- [[ Filetypes ]]
 opt.encoding = 'utf8'            -- str:  String encoding to use
