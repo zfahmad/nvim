@@ -4,16 +4,14 @@ return {
     dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
         local wk = require("which-key")
-        wk.register({
-            ["<leader>"] = {
-                f = {
-                    name = "Find",
-                    f = { "<cmd>Telescope find_files<cr>", "Find files" },
-                    g = { "<cmd>Telescope live_grep<cr>", "Live grep" },
-                    h = { "<cmd>Telescope help_tags<cr>", "Search help tags" },
-                    s = { "<cmd>Telescope grep_string<cr>", "Grep string" },
-                    b = { "<cmd>Telescope buffers<cr>", "List buffers" }
-                }
+        wk.add({
+            {
+                { "<leader>f",  group = "Find" },
+                { "<leader>fb", "<cmd>Telescope buffers<cr>",     desc = "List buffers" },
+                { "<leader>ff", "<cmd>Telescope find_files<cr>",  desc = "Find files" },
+                { "<leader>fg", "<cmd>Telescope live_grep<cr>",   desc = "Live grep" },
+                { "<leader>fh", "<cmd>Telescope help_tags<cr>",   desc = "Search help tags" },
+                { "<leader>fs", "<cmd>Telescope grep_string<cr>", desc = "Grep string" },
             }
         })
     end
