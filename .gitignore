@@ -2,3 +2,4 @@ plugin/
 site/
 ftplugin/
 .*
+lazy-lock.json
