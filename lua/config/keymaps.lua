@@ -3,12 +3,8 @@
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent =true }
 
--- map('n', '<Leader>nn', [[:NnnExplorer<CR>]], {})
--- map('n', '<Leader>np', [[:NnnPicker<CR>]], {})
 map('n', '<Leader>ne', [[:Neotree toggle<CR>]], {})
-map('n', '<Leader>cl', [[:set conceallevel=0]], {})
 map('n', '<Leader>ut', [[:UndotreeToggle<CR>]], {})
-map('n', '<Leader>tr', [[:TroubleToggle<CR>]], {})
 map('n', '<Leader>m', [[:make<CR>]], {})
 
 map('n', '<M-j>', '<C-w>j', opts)

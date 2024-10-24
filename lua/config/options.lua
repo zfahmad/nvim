@@ -1,11 +1,7 @@
-vim.g.maplocalleader = ","
-vim.g.mapleader = ","
-
 -- [[ opts.lua ]]
 local opt = vim.opt
 
 -- [[ Context ]]
-opt.colorcolumn = '125'          -- str:  Show col for max line length
 opt.number = true                -- bool: Show line numbers
 opt.relativenumber = true        -- bool: Show relative line numbers
 opt.scrolloff = 12               -- int:  Min num lines of context
@@ -20,10 +16,14 @@ opt.encoding = 'utf8'            -- str:  String encoding to use
 opt.fileencoding = 'utf8'        -- str:  File encoding to use
 
 -- [[ Theme ]]
+vim.cmd.colorscheme('gruvbox')
+opt.colorcolumn = '80'          -- str:  Show col for max line length
 opt.syntax = "ON"                -- str:  Allow syntax highlighting
 opt.termguicolors = true         -- bool: If term supports ui color then enable
 opt.cursorline =  true
 vim.g.cursorline_timeout = '0'
+-- vim.g.tex_subscripts = "[0-9aehijklmnoprsuvx,+-/().]"
+vim.g.tex_conceal = "abdmg"
 
 -- [[ Search ]]
 opt.ignorecase = true            -- bool: Ignore case in search patterns
